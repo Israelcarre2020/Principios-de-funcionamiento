@@ -134,23 +134,23 @@ function controlAudioSlides(numeroSlide) {
             break;
         case 29:
             $('.collapse').removeClass('show');
-            audioActual = new Audio();
+            audioActual = new Audio('assets/voz/Sonido33_ p25.mp3');
             break;
         case 30:
-            audioActual = new Audio();
+            audioActual = new Audio('assets/voz/Sonido34_ p26.mp3');
             break;
         case 31:
-            audioActual = new Audio();
+            audioActual = new Audio('assets/voz/Sonido35_ p27.mp3 .mp3');
             break;   
         case 32:
             $('#carouselFundamentos').carousel(0);
-            audioActual = new Audio();
+            audioActual = new Audio('assets/voz/Sonido36_p28.mp3');
             break; 
         case 33:
-            audioActual = new Audio();
+            audioActual = new Audio('assets/voz/Sonido37_ p29.mp3');
             break; 
         case 34:
-            audioActual = new Audio();
+            audioActual = new Audio('assets/voz/Sonido38_ p30.mp3');
             break;                
         default:
             audioActual = undefined;
