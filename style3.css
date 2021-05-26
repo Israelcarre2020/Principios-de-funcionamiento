@@ -2138,7 +2138,7 @@ input#show:checked ~ input#flecha {
 
 .titulo_portada{
     color: #2c538e;
-    font-size: 4em;
+    font-size: 2rem;
     font-weight: bolder;
     margin-top: 70px;
     margin-bottom: 30px;
