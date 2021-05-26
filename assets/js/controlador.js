@@ -764,7 +764,9 @@ $('#validarjuego4').off('click').on('click', function(){
                     '¡Selecciona los correctos!',
                     '',
                     'warning'
+                    
                 )  
+                intentosJuego++;
             }    
         }
     }  
