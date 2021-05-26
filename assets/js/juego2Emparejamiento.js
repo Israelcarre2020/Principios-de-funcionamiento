@@ -15,7 +15,8 @@ $(document).ready(function () {
     init1();
 });
 
-function init1() {
+function init2() {
+ 
     // Reset the game
     $('#cardPile1').html('');
     $('#cardSlots1').html('');
@@ -47,7 +48,57 @@ function init1() {
         $('<p class="btn btn-warning" style="width:85%">' + words[i - 1] + '</p>').data('number', i).appendTo('#cardSlots1').droppable({
             accept: '#cardPile1 p',
             hoverClass: 'hovered',
-            drop: handleCardDrop1
+            drop: handleCardDrop1,
+            over: function(event, ui) {
+                ui.draggable.draggable('option','revert',false);
+            },
+            out: function(event, ui) {
+                ui.draggable.draggable('option','revert',true);
+            }
+        });
+    }
+}
+
+function init1() {
+    intentosEmparejamiento1 = 0;
+    // Reset the game
+    $('#cardPile1').html('');
+    $('#cardSlots1').html('');
+
+    // Create the pile of shuffled cards
+    var columnaOrigen = [   
+                            'Electrónica digital',
+                            'Electrónica análoga',
+                            'Electrónica de comunicaciones',
+                            'Instrumentación electrónica',
+                            'Optoelectrónica',
+                            'Electrónica de potencia'
+                        ];
+    var numbers = [1, 2, 3,4,5,6];
+    numbers.sort(function () { return Math.random() - .5 });
+
+    for (var i = 0; i < numbers.length; i++) {
+        $('<p class="btn btn-warning boton-juego" style="width:100%">' + columnaOrigen[numbers[i]-1] + '</p>').data('number', numbers[i]).attr('id', 'cardEmparejamiento1' + numbers[i]).appendTo('#cardPile1').draggable({
+            containment: '#contentEmparejamiento1',
+            stack: '#cardPile1 p',
+            cursor: 'move',
+            revert: false
+        });
+    }
+
+    // Create the card slots
+    var words = ['.1.', '.2.', '.3.','.4.', '.5.', '.6.'];
+    for (var i = 1; i <= words.length; i++) {
+        $('<p class="btn btn-warning" style="width:85%">' + words[i - 1] + '</p>').data('number', i).appendTo('#cardSlots1').droppable({
+            accept: '#cardPile1 p',
+            hoverClass: 'hovered',
+            drop: handleCardDrop1,
+            over: function(event, ui) {
+                ui.draggable.draggable('option','revert',false);
+            },
+            out: function(event, ui) {
+                ui.draggable.draggable('option','revert',true);
+            }
         });
     }
 }
@@ -113,6 +164,7 @@ function validarResultado1(){
                 'Puedes intentarlo de nuevo',
                 'error'
             )
+            init2();
         }
     }
 }

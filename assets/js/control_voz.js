@@ -1,12 +1,7 @@
 var audioActivo = true;
 var audioActual;
 
-function cierreActividades() {
 
-    $(".menu-actividades").hide();
-    setTimeout(function () { toggleOptions('.selector'); }, 10);
-    $(".divcontenido").animate({ width: 'show' });
-}
 
 /**
  * por sí en algún momento se necesita saber el slide actual del smart wizard
@@ -71,11 +66,11 @@ function controlAudioSlides(numeroSlide) {
             audioActual = new Audio('assets/voz/U02P04060.mp3');
             break;
         case 11:
-            cierreActividades();
+          
             audioActual = new Audio('assets/voz/U02P04061.mp3');
             break; 
         case 12:
-            cierreActividades();
+           
             $('#carouselActividadAprendizaje2').carousel(0);
             audioActual = new Audio('assets/voz/U02P04062.mp3');
             break;
