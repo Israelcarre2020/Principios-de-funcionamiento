@@ -38,6 +38,9 @@ $(document).ready(function () {
     })
 
     $('#icon_actividades').off('click').on('click', function () {
+
+        pause_audio();
+
         if ($(".divcontenido").is(':visible')) {
             $(".divcontenido").animate({ width: 'hide' });
             $(".menu-actividades").show(1000);
@@ -58,16 +61,16 @@ $(document).ready(function () {
 
         switch (number_at) {
             case "c1":
-                $('#smartwizard').smartWizard("goToStep", 3);
-                $('#smartwizard2').smartWizard("goToStep", 3);
+                $('#smartwizard').smartWizard("goToStep", 4);
+                $('#smartwizard2').smartWizard("goToStep", 4);
                 break;
             case "c2":
-                $('#smartwizard').smartWizard("goToStep", 12);
-                $('#smartwizard2').smartWizard("goToStep", 12);
+                $('#smartwizard').smartWizard("goToStep", 13);
+                $('#smartwizard2').smartWizard("goToStep", 13);
                 break;
             case "c3":
-                $('#smartwizard').smartWizard("goToStep", 23);
-                $('#smartwizard2').smartWizard("goToStep", 23);
+                $('#smartwizard').smartWizard("goToStep", 24);
+                $('#smartwizard2').smartWizard("goToStep", 24);
                 break;
             default:
                 //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
@@ -122,9 +125,9 @@ $(document).ready(function () {
         var stepIndex = parseInt($('#smartwizard').smartWizard("getStepIndex"))+1;
          
         switch (stepIndex) {
-            case 3:
-            case 12:
-            case 23: 
+            case 4:
+            case 13:
+            case 24: 
                 pause_audio();
                 $(".divcontenido").animate({ width: 'hide' }); 
                 $(".menu-actividades").show(1000); 
@@ -188,11 +191,12 @@ $("#solvePuzzle").click(function () { wordfindgame.solve(gamePuzzle, words) });
                                 case 8:
                                     case 9:
                                         case 10:
-                                            case 11:
-                                                $(`.menu_actividades`).removeClass("active_actividad");
-                                                $(`#menu_actividad1`).addClass("active_actividad");
-                                                break;
+                                            case 11:                                        
+                                               
                                                 case 12:
+                                                    $(`.menu_actividades`).removeClass("active_actividad");
+                                                    $(`#menu_actividad1`).addClass("active_actividad");
+                                                    break;
                                                     case 13:
                                                         case 14:
                         case 15:
@@ -203,10 +207,11 @@ $("#solvePuzzle").click(function () { wordfindgame.solve(gamePuzzle, words) });
             case 20:                
             case 21:                
             case 22:                
+            
+            case 23:    
             $(`.menu_actividades`).removeClass("active_actividad");
             $(`#menu_actividad2`).addClass("active_actividad");
-            break;
-            case 23:                
+            break;            
             case 24:                
             case 25:                          
             case 26:                
