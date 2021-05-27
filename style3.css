@@ -11,6 +11,16 @@ body {
     overflow: hidden;
 }
 
+@media screen and (min-width: 800px) {
+    body {
+        font-family: 'Sen', sans-serif;
+        background: #fff;
+        margin: 0;
+        height: 100%;
+        overflow: auto;
+    }
+}
+
 @font-face {
   font-family: 'Digital';
   src: url('assets/fonts/DS-DIGI.ttf') format('truetype');; /* IE9 Compat Modes */
