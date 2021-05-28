@@ -240,6 +240,7 @@ placa_alterna();
 //imagen con opciones
 function placa_alterna() {
     var canvas = new fabric.Canvas('placa_alterna');
+    canvas.hoverCursor = 'pointer';    
     var imgElement1 = 'assets/img_3/cb1-0.png';
     var imgElement2 = 'assets/img_3/cb1-0.png'; 
     var imgElement3 = 'assets/img_3/cb1-0.png';

@@ -11,7 +11,7 @@ body {
     overflow: hidden;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 900px) {
     body {
         font-family: 'Sen', sans-serif;
         background: #fff;
@@ -1168,10 +1168,23 @@ ul.lineas {
     
 }
 
-@media screen and (max-width: 800px) {
+.img22{
+
+    width: 5rem;
+
+    
+}
+
+@media screen and (max-width: 900px) {
     .img21{
         width: 6rem;
     }  
+    .img22{
+
+        width: 5rem;
+    
+        
+    }
  }
 
 
